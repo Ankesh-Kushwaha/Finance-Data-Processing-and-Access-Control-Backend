@@ -45,6 +45,36 @@ Finance Data Processing and Access Control Backend
 Full API Documentation page => https://finance-dashboard-api-documentation-by-ankesh-kushwaha.docs.buildwithfern.com/finance-api/auth/register
 
 ----
+##ALL available API end-points 
+
+For testing can use admin access for 
+email=abc123@gmail.com
+password=abc123
+
+#for apis requested body format and response refer to the above given full api documentation page
+
+ #Auth
+      http://localhost:3000/api/auth/login
+      http://localhost:3000/api/auth/register
+
+  #user
+       http://localhost:3000/api/user/get-all-user
+       http://localhost:3000/api/user/get-a-single-user
+       http://localhost:3000/api/user/change-role
+       http://localhost:3000/api/user/change-status
+
+   #Finance Record CRUD Operation 
+       http://localhost:3000/api/finance/create
+       http://localhost:3000/api/finance/get-all-record?page=2&limit=5&type=expense&createdAt=2026-04-04
+       http://localhost:3000/api/finance/get-single-record/69d184240290f154ce81843f
+       http://localhost:3000/api/finance/update-record/69d184530290f154ce818445
+       http://localhost:3000/api/finance/delete-record/69d184530290f154ce818445
+
+   #Dashboard Analytics Endpoint
+      http://localhost:3000/api/dashboard/record/summary?startDate=2025-01-01&endDate=2025-12-31
+
+   #Global Search with user query 
+     http://localhost:3000/api/finance/search?page=2&limit=5   
 
 ## 🔄 System Flow (User Journey)
 
@@ -274,13 +304,15 @@ query example
 
 ## 📦 Project Structure
 
-
-├── controllers
-├── models
-├── routes
-├── middleware
-├── config
-└── app.js
+backend
+|
+src
+    ├── controllers
+    ├── models
+    ├── routes
+    ├── middleware
+    ├── config
+    └── app.js
 
 
 ---
@@ -289,34 +321,9 @@ query example
 
 ```bash
 git clone <your-repo-url>
-cd project
+cd backend
 npm install
 npm run dev
-
-
----
-
-## 🧪 Testing
-
-Use:
-
-* Postman
-* Swagger (optional)
-
-----
-
-## 💡 Future Improvements
-
-* Redis caching for analytics
-* GraphQL support
-* Multi-tenant system
-* Real-time dashboard (WebSockets)
-
-----
-
-## 👨‍💻 Author
-
-Your Name
 
 ----
 
@@ -454,10 +461,9 @@ PUT /api/user/change-role/:id
   "role": "analyst"
 }
 
-
 👉 Roles available:
 
-* `user`
+* `viewer`
 * `analyst`
 * `admin`
 
@@ -465,7 +471,7 @@ PUT /api/user/change-role/:id
 
 ## 🔐 Role-Based Access Examples
 
-### 👤 USER
+### 👤 viewer
 
 * Can create records
 * Can view only own records
@@ -481,9 +487,6 @@ if (req.user.role === "user") {
 
 * Can view all records
 * Can access dashboard analytics
-
-
-
 ---
 
 ### 🛠️ ADMIN
@@ -491,14 +494,12 @@ if (req.user.role === "user") {
 * Full system access
 * Can:
 
-  * Update/Delete any record
+  * create/Update/Delete any record
   * Manage users
   * Assign roles
-
 ----
 
 ## 🔥 Route Protection Example
-
 
 router.get("/summary", protect, authorize("admin", "analyst"), getFinancialSummary);
 
@@ -506,13 +507,12 @@ router.put("/update-record/:id", protect, authorize("admin"), updateRecord);
 
 router.delete("/delete-record/:id", protect, authorize("admin"), deleteRecord);
 
-
-
-
 ## 💡 Summary
-
 * Authentication → verifies identity
 * Authorization → controls access
 * Middleware → enforces security
 * Controllers → apply business logic
 
+## 👨‍💻 Author
+
+Ankesh Kushwaha
