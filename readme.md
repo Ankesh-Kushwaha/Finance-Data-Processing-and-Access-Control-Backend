@@ -2,12 +2,12 @@
 
 Finance Data Processing and Access Control Backend
 
-Extra things that i created in this assessment :=>
-Authentication using tokens or sessions
-Pagination for record listing
-Soft delete functionality
-Search support
-API documentation
+## Extra things that i created in this assessment :=>
+     *  Authentication using tokens (JWT-Based)
+     * Pagination for record listing
+     * API documentation
+     * Search & Filtering
+     * Soft delete functionality
 
 
 ----
