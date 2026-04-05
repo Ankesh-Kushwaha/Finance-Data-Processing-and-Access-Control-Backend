@@ -1,8 +1,17 @@
 # 📊 Finance Management API
 
-A scalable backend system for managing financial records (income & expenses) with **role-based access control**, **analytics dashboard**, and **advanced search capabilities**.
+Finance Data Processing and Access Control Backend
+
+Extra things that i created in this assessment :=>
+Authentication using tokens or sessions
+Pagination for record listing
+Soft delete functionality
+Search support
+API documentation
+
 
 ----
+
 
 ## 🚀 Features
 
@@ -32,6 +41,8 @@ A scalable backend system for managing financial records (income & expenses) wit
 | user    | Manage own records                     |
 | analyst | View all records + dashboard analytics |
 | admin   | Full access (CRUD + user management)   |
+
+Full API Documentation page => https://finance-dashboard-api-documentation-by-ankesh-kushwaha.docs.buildwithfern.com/finance-api/auth/register
 
 ----
 
@@ -320,7 +331,7 @@ This project demonstrates:
 
 ## 🔐 Authentication & Role-Based Access Flow
 
-This system uses **JWT-based authentication** combined with **Role-Based Access Control (RBAC)** to secure APIs.
+This system uses JWT-based authentication combined with Role-Based Access Control (RBAC) to secure APIs .
 
 ----
 
