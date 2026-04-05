@@ -54,21 +54,21 @@ password=abc123
 #for apis requested body format and response refer to the above given full api documentation page
 
  #Auth
-      http://localhost:3000/api/auth/login
+      http://localhost:3000/api/auth/login, 
       http://localhost:3000/api/auth/register
 
   #user
-       http://localhost:3000/api/user/get-all-user
-       http://localhost:3000/api/user/get-a-single-user
-       http://localhost:3000/api/user/change-role
+       http://localhost:3000/api/user/get-all-user ,
+       http://localhost:3000/api/user/get-a-single-user ,
+       http://localhost:3000/api/user/change-role,
        http://localhost:3000/api/user/change-status
 
    #Finance Record CRUD Operation 
-       http://localhost:3000/api/finance/create
-       http://localhost:3000/api/finance/get-all-record?page=2&limit=5&type=expense&createdAt=2026-04-04
-       http://localhost:3000/api/finance/get-single-record/69d184240290f154ce81843f
-       http://localhost:3000/api/finance/update-record/69d184530290f154ce818445
-       http://localhost:3000/api/finance/delete-record/69d184530290f154ce818445
+       http://localhost:3000/api/finance/create,
+       http://localhost:3000/api/finance/get-all-record?page=2&limit=5&type=expense&createdAt=2026-04-04,
+       http://localhost:3000/api/finance/get-single-record/69d184240290f154ce81843f,
+       http://localhost:3000/api/finance/update-record/69d184530290f154ce818445,
+       http://localhost:3000/api/finance/delete-record/69d184530290f154ce818445,
 
    #Dashboard Analytics Endpoint
       http://localhost:3000/api/dashboard/record/summary?startDate=2025-01-01&endDate=2025-12-31
