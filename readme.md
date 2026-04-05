@@ -2,6 +2,10 @@
 
 Finance Data Processing and Access Control Backend
 
+# For Testing use 
+    https://finance-data-processing-and-access-i9ap.onrender.com/   instead of http://localhost:3000
+
+
 ## Extra things that i created in this assessment :=>
      *  Authentication using tokens (JWT-Based)
      * Pagination for record listing
@@ -51,29 +55,31 @@ For testing can use admin access for
 email=abc123@gmail.com
 password=abc123
 
+Deployed url => https://finance-data-processing-and-access-i9ap.onrender.com/health (use for health check)
+
 #for apis requested body format and response refer to the above given full api documentation page
 
- #Auth
+    #Auth
       http://localhost:3000/api/auth/login, 
       http://localhost:3000/api/auth/register
 
-  #user
+     #user
        http://localhost:3000/api/user/get-all-user ,
        http://localhost:3000/api/user/get-a-single-user ,
        http://localhost:3000/api/user/change-role,
        http://localhost:3000/api/user/change-status
 
-   #Finance Record CRUD Operation 
+    #Finance Record CRUD Operation 
        http://localhost:3000/api/finance/create,
        http://localhost:3000/api/finance/get-all-record?page=2&limit=5&type=expense&createdAt=2026-04-04,
        http://localhost:3000/api/finance/get-single-record/69d184240290f154ce81843f,
        http://localhost:3000/api/finance/update-record/69d184530290f154ce818445,
        http://localhost:3000/api/finance/delete-record/69d184530290f154ce818445,
 
-   #Dashboard Analytics Endpoint
+    #Dashboard Analytics Endpoint
       http://localhost:3000/api/dashboard/record/summary?startDate=2025-01-01&endDate=2025-12-31
 
-   #Global Search with user query 
+    #Global Search with user query 
      http://localhost:3000/api/finance/search?page=2&limit=5   
 
 ## 🔄 System Flow (User Journey)
